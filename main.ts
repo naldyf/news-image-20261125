@@ -30,7 +30,10 @@
 //
 // The competition caps hold by construction: the image this program copies is
 // already 1024x1024 pixels and 448033 bytes, under the 1 MiB limit, and the
-// program writes nothing else — no resize, no re-encode, no fetch.
+// program writes nothing else — no resize, no re-encode, no fetch. Note that
+// entry.png holds JPEG (JFIF) data; the competition names the file entry.png
+// either way and tells a PNG from a JPEG by its first bytes, so the name
+// stays entry.png.
 //
 // Run outside the grader with:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
